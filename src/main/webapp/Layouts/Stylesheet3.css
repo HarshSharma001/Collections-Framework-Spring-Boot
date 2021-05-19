@@ -1,0 +1,42 @@
+@font-face{
+    font-family: "Harsh Sharma";
+    src: url("/Fonts/Bradley Hand ITC.ttf");
+    font-family: "Comic Sans MS";
+}
+
+body{
+    background-color: black;
+}
+
+#error_message{
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0px 20px 20px;
+    color: white;
+    font-size: 20px;
+}
+
+#line1{
+    margin-left: 390px;
+    font-family: "Bradley Hand ITC";
+    color: white;
+    font-size: 25pt;
+}
+
+#line2{
+    margin-left: 420px;
+    font-family: "Bradley Hand ITC";
+    color: white;
+    font-size: 25pt;
+}
+
+#error_image{
+    margin-top: 0px;
+    margin-left: 420px;
+}
+
+img{
+    width: 50%;
+    height: 50%;
+}

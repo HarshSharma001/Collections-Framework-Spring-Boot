@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="arraylist" class="com.collectionsframework.rootInterfaces.childInterfaces.concreteImpl.MyArrayList">
+        <constructor-arg name="type" value="int">
+        </constructor-arg>
+    </bean>
+
+    <bean id="vector" class="com.collectionsframework.rootInterfaces.childInterfaces.concreteImpl.MyVector">
+        <constructor-arg name="type" value="int">
+        </constructor-arg>
+    </bean>
+
+    <bean id="linkedlist" class="com.collectionsframework.rootInterfaces.childInterfaces.concreteImpl.MyLinkedList">
+        <constructor-arg name="type" value="int">
+        </constructor-arg>
+    </bean>
+
+    <bean id="stack" class="com.collectionsframework.rootInterfaces.childInterfaces.concreteImpl.MyStack">
+        <constructor-arg name="type" value="int">
+        </constructor-arg>
+    </bean>
+
+    <bean id="queue" class="com.collectionsframework.rootInterfaces.childInterfaces.concreteImpl.MyNormalQueue">
+        <constructor-arg name="type" value="int">
+        </constructor-arg>
+    </bean>
+
+    <bean id="circularQueue" class="com.collectionsframework.rootInterfaces.childInterfaces.concreteImpl.MyCircularQueue">
+        <constructor-arg name="type" value="int">
+        </constructor-arg>
+    </bean>
+
+    <bean id="priorityQueue" class="com.collectionsframework.rootInterfaces.childInterfaces.concreteImpl.MyPriorityQueue">
+        <constructor-arg name="type" value="int">
+        </constructor-arg>
+    </bean>
+
+    <bean id="set" class="com.collectionsframework.rootInterfaces.childInterfaces.concreteImpl.MyConcreteSet">
+        <constructor-arg name="type" value="int">
+        </constructor-arg>
+    </bean>
+</beans>
