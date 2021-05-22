@@ -1,11 +1,10 @@
 package com.collectionsframework.controller;
 
 import com.collectionsframework.businessLogic.DataStructureHandler;
+import com.collectionsframework.businessLogic.DownloadFileService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -13,11 +12,25 @@ import org.springframework.web.servlet.ModelAndView;
 public class FrontController {
     @Autowired
     private DataStructureHandler handler;
+    @Autowired
+    private DownloadFileService fileDownloader;
 
     @RequestMapping(path = "/collections")
     public ModelAndView getHomepage(){
         ModelAndView mav = new ModelAndView();
         mav.setViewName("Homepage");
+        return mav;
+    }
+
+    @GetMapping(path = "/download")
+    public ResponseEntity download(){
+        return fileDownloader.downloadFile();
+    }
+
+    @GetMapping(path = "aboutMe")
+    public ModelAndView aboutMe(){
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("AboutMe");
         return mav;
     }
 

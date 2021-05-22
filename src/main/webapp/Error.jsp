@@ -7,7 +7,7 @@
 <html>
 <head>
     <title>Error Alert</title>
-    <link rel="stylesheet" type="text/css" href="Layouts/Stylesheet3.css">
+    <link rel="stylesheet" type="text/css" href="/css/Stylesheet3.css">
 </head>
     <body>
     <div id="error_message">

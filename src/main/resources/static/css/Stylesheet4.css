@@ -1,0 +1,18 @@
+body{
+	background-color: #F8FFFE;
+}
+
+#text{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+fieldset{
+	margin: 50px;
+	border: 2px solid black;
+	border-radius: 40px;
+	font-size: 17px;
+	word-spacing: 5px;
+	line-height: 30px;
+	padding: 20px;
+}

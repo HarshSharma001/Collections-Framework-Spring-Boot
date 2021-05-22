@@ -5,17 +5,19 @@
 <html>
 <head>
     <title>Collections API</title>
-    <link rel="stylesheet" type="text/css" href="Layouts/Stylesheet1.css">
+    <link rel="stylesheet" type="text/css" href="/css/Stylesheet1.css">
 </head>
 <body>
 
 <div id="navigation_bar">
-    <a href="" class="navigation_links" >Home</a>
+    <a href="collections" class="navigation_links" >Home</a>
     <a href="testApi" class="navigation_links" >Test API</a>
-    <a href="" class="navigation_links" >Get Source Code</a>
-    <a href="" class="navigation_links" >Download</a>
-    <a href="" class="navigation_links" >Contact US</a>
-    <a href="" class="navigation_links" >About Me</a>
+    <a href="https://github.com/HarshSharma001/Collections-Framework-Spring-Boot" target="_blank" class="navigation_links" >Get Source Code</a>
+    <form id="download_form" action="download" class="navigation_links">
+        <input id="download_link" type="submit" class="navigation_links" value="Download">
+    </form>
+    <a href="mailto:eliteharsh1998@gmail.com" class="navigation_links" >Contact US</a>
+    <a href="aboutMe" class="navigation_links" >About Me</a>
 </div>
 
 <fieldset>

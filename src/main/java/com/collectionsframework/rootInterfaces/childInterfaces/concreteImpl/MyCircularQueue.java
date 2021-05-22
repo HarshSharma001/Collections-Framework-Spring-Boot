@@ -72,8 +72,8 @@ public class MyCircularQueue implements MyQueue {
 	 * method to copy old array elements into the array with the lastest element as
 	 * well
 	 *
-	 * @param tempArr - the old array elements
-	 * @param array   - the current empty array
+	 * @param tempQueue - the old array elements
+	 * @param queue   - the current empty array
 	 * @param o       - the object type data element to be inserted into the array
 	 * @return returns Object[] array
 	 */
@@ -134,7 +134,7 @@ public class MyCircularQueue implements MyQueue {
 	/**
 	 * method to increase size by 1 of the array and return it
 	 *
-	 * @param array - the array who's size need to be extended
+	 * @param queue - the array who's size need to be extended
 	 * @return Object[] array with no elements in it
 	 */
 	private Object[] increaseSize(Object[] queue) {
@@ -412,7 +412,6 @@ public class MyCircularQueue implements MyQueue {
 			}
 			rear = rear + 1;
 			queue[rear] = o;
-			System.out.println("queue["+rear+"] = "+queue[rear]);
 		}
 
 		else if (rear == queue.length - 1 && front == 0) {
@@ -425,7 +424,6 @@ public class MyCircularQueue implements MyQueue {
 			if (rear < front - 1) {
 				rear = rear + 1;
 				queue[rear] = o;
-				System.out.println("queue["+rear+"] = "+queue[rear]);
 			} else if (rear == front - 1) {
 				Object[] tempQueue = saveQueueELements(queue, front, rear);
 				queue = increaseSize(queue);
@@ -436,7 +434,6 @@ public class MyCircularQueue implements MyQueue {
 		else if (rear == queue.length - 1 && front > 0) {
 			rear = 0;
 			queue[rear] = o;
-			System.out.println("queue["+rear+"] = "+queue[rear]);
 		}
 
 	}
@@ -779,22 +776,33 @@ public class MyCircularQueue implements MyQueue {
 		if (front == -1 && rear == -1) {
 			return null;
 		} else if (rear < front) {
-			size = queue.length - front;
+
+			int limit = -1;
+			for (int i = front; i < queue.length; i++) {
+				if (queue[i] == null) {
+					limit = i;
+					break;
+				} else
+					size++;
+			}
+
 			size = size + rear + 1;
 			arr = new Object[size];
-			for (int i = front; i < queue.length; i++) {
-				arr[index] = queue[i];
-				index++;
-			}
 
 			for (int i = 0; i <= rear; i++) {
 				arr[index] = queue[i];
 				index++;
 			}
+
+			for (int i = front; i < limit; i++) {
+				arr[index] = queue[i];
+				index++;
+			}
+
 		} else if (rear >= front) {
 			size = (rear - front) + 1;
 			arr = new Object[size];
-			for (int i = front; i <= front; i++) {
+			for (int i = front; i <= rear; i++) {
 				arr[index] = queue[i];
 				index++;
 			}

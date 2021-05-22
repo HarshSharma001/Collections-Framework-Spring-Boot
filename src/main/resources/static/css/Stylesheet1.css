@@ -36,7 +36,7 @@ body{
 
 #navigation_bar{
 	padding: 30px 0px;
-	border:  5px solid black; 
+	border:  5px solid black;
 	font-size: 18px;
 	background-color: rgb(247, 246, 154);
 	font-weight: bold;
@@ -52,6 +52,21 @@ body{
 	padding-left: 85px;
 	padding-right: 40px;
 	color: green;
+}
+
+#download_form{
+	display: inline;
+	padding: 0px;
+}
+
+#download_link{
+	font-family: "Comic Sans MS";
+	font-weight: bold;
+	font-size: 19px;
+	background-color: rgb(247, 246, 154);
+	padding-left: 85px;
+	padding-right: 40px;
+	border: none;
 }
 
 fieldset{

@@ -7,7 +7,7 @@
 <html>
 <head>
     <title>Test Collections</title>
-    <link rel="stylesheet" type="text/css" href="Layouts/Stylesheet2.css">
+    <link rel="stylesheet" type="text/css" href="/css/Stylesheet2.css">
 </head>
 <body>
 
