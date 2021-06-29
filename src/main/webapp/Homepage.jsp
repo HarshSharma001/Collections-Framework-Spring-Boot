@@ -17,7 +17,7 @@
         <input id="download_link" type="submit" class="navigation_links" value="Download">
     </form>
     <a href="mailto:eliteharsh1998@gmail.com" class="navigation_links" >Contact US</a>
-    <a href="aboutMe" class="navigation_links" >About Me</a>
+    <a href="aboutMe" class="navigation_links" >About US</a>
 </div>
 
 <fieldset>

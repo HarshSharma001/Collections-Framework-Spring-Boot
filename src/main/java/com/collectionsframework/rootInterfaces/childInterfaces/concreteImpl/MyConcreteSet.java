@@ -101,24 +101,32 @@ public class MyConcreteSet implements MySet {
 				if (linearSearch.search(o, currentSize, array) != -1) {
 					return array;
 				}
+				else{
+					array[currentSize] = o;
+					currentSize += 1;
+
+					if (currentSize >= 2) {
+						updateSortingStatus(currentSize - 2, currentSize - 1, type, array);
+					}
+				}
 			} else if (isSorted) {
 				try {
 					if (binarySearch.search(o, currentSize, array, type) != -1) {
 						return array;
+					}
+					else{
+						array[currentSize] = o;
+						currentSize += 1;
+
+						if (currentSize >= 2) {
+							updateSortingStatus(currentSize - 2, currentSize - 1, type, array);
+						}
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		}
-
-		array[currentSize] = o;
-		currentSize += 1;
-
-		if (currentSize >= 2) {
-			updateSortingStatus(currentSize - 2, currentSize - 1, type, array);
-		}
-
 		return array;
 	}
 
@@ -399,8 +407,32 @@ public class MyConcreteSet implements MySet {
 	public void add(Object o) {
 
 		if (currentSize < array.length) {
-			array[currentSize] = o;
-			currentSize++;
+			// to stop duplicates insertion
+			if (!isSorted) {
+				if (linearSearch.search(o, currentSize, array) == -1) {
+					array[currentSize] = o;
+					currentSize += 1;
+
+					if (currentSize >= 2) {
+						updateSortingStatus(currentSize - 2, currentSize - 1, type, array);
+					}
+				}
+			} else if (isSorted) {
+				try {
+					if (binarySearch.search(o, currentSize, array, type) == -1) {
+						array[currentSize] = o;
+						currentSize += 1;
+
+						if (currentSize >= 2) {
+							updateSortingStatus(currentSize - 2, currentSize - 1, type, array);
+						}
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+//			array[currentSize] = o;
+//			currentSize++;
 			if (currentSize == 1) {
 				isSorted = true;
 			}
